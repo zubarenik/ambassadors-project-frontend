@@ -102,7 +102,7 @@ const classNames = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 24px;
+  padding: 9px 24px;
   border-radius: 20px;
   white-space: nowrap;
   text-decoration: none;
@@ -118,6 +118,7 @@ const classNames = computed(() => {
     filter 0.3s ease-in-out;
   cursor: pointer;
   --hover-lay-color: white;
+  font-weight: bold;
 
   &::after {
     position: absolute;
@@ -186,6 +187,13 @@ const classNames = computed(() => {
   &--disabled {
     box-shadow: none;
     cursor: default;
+  }
+
+  &--reversed {
+    background-color: var(--font-primary);
+    color: var(--primary-color);
+    border: 2px solid;
+    border-color: var(--primary-color);
   }
 }
 </style>

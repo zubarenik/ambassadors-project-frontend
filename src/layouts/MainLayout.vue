@@ -3,7 +3,7 @@
 
   <!-- begin::Body -->
   <div class="page flex flex-row">
-    <!-- <AppHeader /> -->
+    <AppHeader />
 
     <!-- begin::Content -->
     <div class="content app-scroll-bar" id="content">
@@ -16,9 +16,10 @@
         </router-view>
       </div>
       <!-- end::Content Body -->
+
+      <AppFooter />
     </div>
     <!-- end::Content -->
-    <!-- <KTFooter /> -->
   </div>
   <!-- end::Body -->
 
@@ -26,7 +27,8 @@
 </template>
 
 <script setup lang="ts">
-// import AppHeader from '@/layouts/components/header/Header.vue';
+import AppHeader from '@/layouts/AppHeader.vue';
+import AppFooter from './AppFooter.vue';
 </script>
 
 <style lang="scss" scoped>
