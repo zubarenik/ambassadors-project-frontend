@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './common.scss';
+@import './themes.scss';
+@import './sizes.scss';
+@import './overlay.scss';
+@import './transitions.scss';

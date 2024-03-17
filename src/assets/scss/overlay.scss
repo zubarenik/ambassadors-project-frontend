@@ -1,0 +1,16 @@
+.overlay {
+  position: relative;
+
+  .overlay-layer {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 0.3s ease;
+  }
+
+  &.overlay-block {
+    cursor: wait;
+  }
+}

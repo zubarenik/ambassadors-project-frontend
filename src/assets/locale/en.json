@@ -1,0 +1,438 @@
+{
+    "email": "E-mail",
+    "password": "Password",
+    "search": "Search",
+    "select": "Select",
+    "clear": "Clear",
+    "empty": "Empty",
+    "update": "Update",
+    "delete": "Delete",
+    "save": "Save",
+    "not_found": "Not found",
+    "from": "from",
+    "to": "to",
+    "day": {
+        "1": "day",
+        "2": "day"
+    },
+    "all": "All",
+    "not_active": "Not active",
+    "active": "Active",
+    "cancel": "Cancel",
+    "select_file": "Select file",
+    "choose_file": "Choose file",
+    "button_save": "Save",
+    "button_cancel": "Cancel",
+    "button_back": "Back",
+    "button_cancel_changes": "Cancel changes",
+    "button_add": "Add",
+    "button_edit": "Edit",
+    "button_create_new": "Create new",
+    "button_type_data": "Enter the data",
+    "button_agree": "Agree",
+    "button_next_step": "Next step",
+    "button_send": "Send",
+    "button_super": "Awesome",
+    "button_delete_it": "Yes, delete it",
+    "total": "Total",
+    "display_on_page": "Display on page",
+    "drop_filters": "drop filtres",
+    "success": "Success",
+    "success_save": "Your changes have been successfully saved",
+    "error": "Error",
+    "error_save": "Something went wrong",
+    "try_again": "Try again",
+    "back_to_coreg_list": "Back to co-registrations",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "text": "Text",
+    "text_link": "Text for link",
+    "link": "Link",
+    "name": "Name text",
+    "hint": "Hint text",
+    "type": "Type",
+    "preview": "Preview",
+    "title": "Title",
+    "move_file": "Drag and drop file here",
+    "or": "or",
+    "whole_world": "Whole world",
+    "hide": "Hide",
+    "show_more": "Show more",
+    "back_to_list": "Back to list",
+    "status": "Status",
+    "show_from": "Show from",
+    "till": "Till",
+    "sources": "Sources",
+    "image": "Image",
+    "feed": "Feed",
+    "profile": "Profile",
+    "home": "Home",
+    "calendar": "Calendar",
+    "market": "Market",
+    "default_animation": "Default animation",
+    "cohorts": "Cohorts",
+    "included_cohorts": "Included cohorts",
+    "excluded_cohorts": "Excluded cohorts",
+    "partner": "Partner",
+    "language_short": "Lang.",
+    "mode": "Mode",
+    "weeks": "Weeks",
+
+    "components": {
+        "form": {
+            "field": {
+                "required": "It's required field",
+                "number": "Value should be a number",
+                "static_link": "Incorrect file link",
+                "url": "Incorrect url",
+                "unique": "Values should be unique"
+            }
+        },
+        "table": {
+            "actions": "Actions",
+            "options": "Options",
+            "cols_show_hide": "Show/Hide Columns" 
+        },
+        "preview": {
+            "name": "Preview",
+            "fill_fields": "Fill in all the required fields to see the preview",
+            "settings": "Preview settings",
+            "text": "Preview text",
+            "image": "Preview image"
+        },
+        "file": {
+            "incorrect_format": "Incorrect file format",
+            "incorrect_image_size": "Image size should be {width}x{height}px",
+            "put_json": "You can put a JSON file below or leave a link",
+            "put_image": "You can put an image below or leave a link"
+        },
+        "range": {
+            "min_max": "Min/Max {value}"
+        },
+        "text_editor": {
+            "link": {
+                "add": "Add link"
+            },
+            "image": {
+                "add": "Add image"
+            },
+            "video": {
+                "add": "Add video"
+            },
+            "button": {
+                "add": "Add button",
+                "text": "Button text"
+            },
+            "html": {
+                "add": "Add HTML",
+                "text": "HTML code"
+            },
+            "event": {
+                "mixpanel": "Add mixpanel event",
+                "label": "Name for event"
+            }
+        }
+    },
+
+    "pregnancy": {
+        "days": {
+            "before": "Day of planning",
+            "pregnant": "Day of pregnancy",
+            "after": "Child's age in days"
+        },
+        "states": {
+            "before": "Planning",
+            "pregnant": "Pregnancy",
+            "after": "Newborn"
+        },
+        "states_short": {
+            "before": "PL.",
+            "pregnant": "PR.",
+            "after": "NewB."
+        }
+    },
+
+    "pages": {
+        "sign_in": {
+            "title": "Incorrect user token"
+        },
+
+        "log_in": {
+            "name": "Log in",
+            "title": "Log in is performed"
+        },
+
+        "animations": {
+            "name": "Animations on start",
+            "model": {
+                "id": "ID",
+                "language": "Language",
+                "week": "Week",
+                "week_start": "Start week of pregnancy for display animation",
+                "included_cohorts": "Included cohorts",
+                "excluded_cohorts": "Excluded cohorts",
+                "is_active": "Active",
+                "file": "Animation file"
+            },
+            "add_animations": "Add animation",
+            "delete_animations": "Delete selected animations",
+            "select_file": "Select file",
+            "valid_file_desc": "Lottie animation JSON file – 600KB,\n 460x1017px, 1-3 sec",
+            "confirm_delete": "Are you sure you want to delete the selected animation?\n",
+            "confirm_many_delete": "Are you sure you want to delete the selected animations?\n",
+            "see_saved_file": "View saved file",
+            "alert_success_create": "Animation successfully saved",
+            "alert_success_update": "Animation successfully updated",
+            "alert_success_update_many": "Data successfully updated"
+        },
+
+        "audiences": {
+            "name": "Audiences"
+        },
+
+        "feed_order": {
+            "name": "Feed order"
+        },
+
+        "deeplinks": {
+            "name": "Cards in the feed",
+            "create": "Create card in the feed",
+            "model": {
+                "language": "Language",
+                "internal_name": "Internal name",
+                "priority": "Priority",
+                "priority_table": "Prio.",
+                "sub_type": "Sub type",
+                "premium_status": "Premium type",
+                "premium_status_table": "Prem. type",
+                "partner": "Partner",
+                "included_cohorts": "Included cohorts",
+                "excluded_cohorts": "Excluded cohorts",
+                "ads": "Ads.",
+                "is_active": "Active",
+                "start_day": "Start day",
+                "stop_day": "Stop day",
+                "preview_image": "Preview image"
+            },
+            "alert_success_create": "Card in the feed successfully created",
+            "alert_success_update": "Card in the feed successfully updated",
+            "priority_busy": "This priority is already in use",
+            "priority_busy_msg": "Priority is busy, but you can save the card in the feed",
+            "deeplink_settings": "Card in the feed settings",
+            "content_block": "Content block"
+        },
+
+        "articles": {
+            "create": "Create article",
+            "name": "Articles",
+            "article": "Article",
+            "settings": "Article settings",
+            "content": "Content block",
+            "heading": "Heading",
+            "feed-articles": {
+                "name": "Feed articles",
+                "priority": "Priority",
+                "priority_short": "Prio.",
+                "action_disabled_hint": "To change the activity of the article, open the edit window",
+                "priority_busy": "This priority is already in use",
+                "priority_busy_msg": "Priority is busy, but you can save the article.",
+                "search": "Search by feed ID, title, lokal ID"
+            },
+            "feed-categories": {
+                "name": "Categories",
+                "name_one": "Category",
+                "create": "Create category",
+                "select": "Select categories",
+                "select_one": "Select category",
+                "model": {
+                    "image": "Category image",
+                    "name": "Category name"
+                },
+                "alert_success_create": "Category successfully saved",
+                "alert_success_update": "Category successfully updated",
+                "placeholders": {
+                    "name": "Write name",
+                    "image": "PNG file - 420x240px"
+                },
+                "valid_msg": {
+                    "name": "Name must be at most 25 characters"
+                },
+                "hint": {
+                    "name": "max 25 symbols"
+                }
+            },
+            "feed-tags": {
+                "name": "Tags",
+                "name_one": "Tag",
+                "create": "Create tag",
+                "select": "Select tags",
+                "select_one": "Select tag",
+                "selection": "Select tag",
+                "save_one": "Save tag",
+                "model": {
+                    "name": "Tag`s name"
+                },
+                "alert_success_create": "Tag successfully saved",
+                "alert_success_update": "Tag successfully updated",
+                "alert_unique_tag": "Avoid repeating languages in tags \n Please select a different language",
+                "placeholders": {
+                    "name": "Write name",
+                    "language": "Select language"
+                },
+                "valid_msg": {
+                    "name": "Name must be at most 35 characters"
+                },
+                "hint": {
+                    "name": "max 35 symbols"
+                }
+            },
+            "author": {
+                "name": "Author's name",
+                "desc": "Author's description",
+                "position": "Author's position",
+                "image": "Author's image",
+                "block": "Author's block",
+                "img_tip": "Photo of the doctor-author/reviewer of the article"
+            },
+            "type": {
+                "timeline": "Timeline",
+                "premium": "Premium",
+                "ads": "Advertising",
+                "ann": "Announcement"
+            },
+            "type_short": {
+                "timeline": "Time.",
+                "premium": "Prem.",
+                "ads": "Ads.",
+                "ann": "Ann."
+            },
+            "tags_hint": "You can select a max of 4 tags",
+            "tags_popup": "Avoid repeating tags in articles \n Please choose another tag",
+            "alert_success_create": "Article successfully created",
+            "alert_success_update": "Article successfully updated"
+        },
+
+        "weekly-articles": {
+            "name": "Weekly articles",
+            "create": "Create article",
+            "settings": "Article settings",
+            "content": "Content block",
+            "model": {
+                "week": "Week",
+                "internal_name": "Internal name",
+                "text_preview": "Text preview",
+                "section": "Section",
+                "language": "Language",
+                "is_active": "Active",
+                "html_text": "Text editor"
+            },
+            "alert_success_create": "Article successfully created",
+            "alert_success_update": "Article successfully updated",
+            "circles": {
+                "baby": "Baby",
+                "mother": "Mother",
+                "meal": "Meal",
+                "tips": "Tips",
+                "fifth_circle": "Market",
+                "mother_newborn": "Mother"
+            },
+            "preview_week": "Wed, July 13 - Wed, July 20" 
+        },
+
+        "upload_file": {
+            "name": "Upload image"
+        },
+
+        "market": {
+            "name": "Market"
+        },
+
+        "coregistrations": {
+            "name": "Co-registrations",
+            "short_name": "co-reg",
+            "title": "Page is in development",
+            "subheader_title": "Filters",
+            "need_bright_card": "Need a bright card?",
+            "is_required_field": "is this a required field?",
+            "confirm_delete_checkbox_title": "Delete this checkbox?",
+            "confirm_delete_checkbox_subtitle": "You will not be able to recover it",
+            "button_create_coreg": "Create coregistration",
+            "alert_success_create": "Co-registration successfully saved",
+            "modal_coreg_type": {
+                "title": "Select the co-reg type",
+                "default_text": "Co-registration on the \n “Your data - our responsibility” screen",
+                "list_item_text": "Co-registration in the list \n without collecting additional data",
+                "personal_screen_text": "Co-registration \n with additional data collection",
+                "info_item_text": "An element to attract \n the user's attention"
+            },
+            "model": {
+                "status": "status",
+                "partner": "partner's name",
+                "cohort": "cohort",
+                "start_day": "start day",
+                "end_day": "end day",
+                "title": "title",
+                "description": "description",
+                "success_message": "The received promo code will arrive in your mail within 24 hours..."
+            },
+            "desc": {
+                "cohort": "Cohort, the country where the partner policy is displayed",
+                "title": "The title of the element is highlighted in bold",
+                "description": "Item subheading. Can be used to describe the benefits of the policy",
+                "preview_lottie_animation": "Json animation file",
+                "preview_image": "The partner's logo",
+                "text_parts": "For old mobile version",
+                "partner_fields": "Value of additional fields",
+                "image": "Partner logo on a separate screen \"personal_screen\"",
+                "lottie_animation": "Json file animation that is displayed on a separate screen \"personal_screen\"",
+                "checkboxes": "Becomes available only after successful creation of co-registration",
+                "partner_fields_name": "Internal field",
+                "partner_fields_hint": "For mobile",
+                "success_message": "Maximum 120 characters"
+            },
+            "valid_msg": {
+                "start_day": "Start day must be less than the end day",
+                "end_day": "End day must be greater than the start day",
+                "tag_text": "Tag must be at most 19 characters",
+                "success_message": "Success message must be at most 120 characters"
+            },
+            "preview": {
+                "default": {
+                    "title": "Your data — our responsibility",
+                    "subtitle": "Familiarize yourself with the data processing policies and confirm your consent.",
+                    "text_parts_1": "I agree to the processing of personal data in accordance with ",
+                    "text_parts_2": "the Privacy Policy"
+                },
+                "listing": {
+                    "not_available": "To see preview you must choose \n cohort and mode",
+                    "title": "And one more thing!",
+                    "checkbox_label": "Agree with all policies"
+                },
+                "success_message": {
+                    "title": "Everything worked out!"
+                }
+            }
+        }
+    },
+
+    "languages": {
+        "one": "Language",
+        "more": "Languages",
+        "en": "English",
+        "zh": "Chinese",
+        "fr": "French",
+        "ru": "Russian",
+        "de": "German",
+        "ko": "Korean",
+        "pt": "Portuguese",
+        "es": "Spanish",
+        "yue": "Yue Chinese (Cantonese)",
+        "uk": "Ukrainian",
+        "vi": "Vietnamese",
+        "fil": "Filipino",
+        "id": "Indonesian",
+        "es_MX": "Spanish Mexico",
+        "th": "Thai",
+        "tr": "Turkish"
+    }
+}

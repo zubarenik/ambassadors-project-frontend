@@ -1,0 +1,10 @@
+@layer base {
+  :root {
+    --primary-color: theme('colors.purple');
+    --highlight-color: theme('colors.purple');
+    --active-color: theme('colors.purple');
+    --accent-color: theme('colors.purple');
+
+    --font-primary: white;
+  }
+}
