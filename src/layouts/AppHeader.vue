@@ -1,13 +1,35 @@
 <template>
   <div class="header text-primary">
     <AppIcon name="geo" class="text-7xl" />
+
+    <div class="flex w-fit items-center justify-between gap-10">
+      <RouterLink v-for="link in links" :key="link.name" :to="link.path" class="text-xl">{{ link.name }}</RouterLink>
+    </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+const links = [
+  {
+    name: 'О проекте',
+    path: { name: 'welcome-page' },
+  },
+  {
+    name: 'Голосование',
+    path: { name: 'welcome-page' },
+  },
+  {
+    name: 'Результаты',
+    path: { name: 'welcome-page' },
+  },
+];
+</script>
 
 <style lang="scss" scoped>
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
 
   position: absolute;
