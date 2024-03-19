@@ -60,7 +60,6 @@ import useAmbassadorsStore, {
   IAmbassadorCategory,
 } from '@/store/ambassadors';
 import isEqual from 'lodash.isequal';
-import { useImage } from '@/core/utils/image';
 
 const ambassadorStore = useAmbassadorsStore();
 const { getAmbassadorList } = storeToRefs(ambassadorStore);
