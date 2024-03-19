@@ -5,7 +5,7 @@ import useModalConfirm from '@/core/plugins/useModalConfirm';
 import { ModalConfirmTypes } from '@/components/modal/types';
 import { i18n } from '@/core/services/I18n';
 
-const BASE_API_URL = `${import.meta.env.VITE_APP_API_URL}/api/v3.2/admin-panel`;
+const BASE_API_URL = `${import.meta.env.VITE_APP_API_URL}/ambassadors-competition`;
 
 /**
  ** Pagination
@@ -77,11 +77,8 @@ export abstract class HttpClient {
     this.instance.interceptors.response.use(this._handleResponse, this._handleError);
   }
 
-  protected _handleResponse({ data }: AxiosResponse<ResponseSuccessBody>) {
-    if (data.pagination) {
-      return data;
-    }
-    return data.result;
+  protected _handleResponse({ data }: AxiosResponse<unknown>) {
+    return data;
   }
 
   protected async _handleError(error: AxiosError<ResponseErrorBody>) {

@@ -37,7 +37,7 @@ interface LoaderProps {
 const props = withDefaults(defineProps<LoaderProps>(), {
   size: 30,
   width: 3,
-  strokeColor: '#7981AC',
+  strokeColor: 'var(--primary-color)',
   progress: 0.3,
   rotating: false,
 });

@@ -11,7 +11,7 @@
             'Миссия РГО - сблизить людей и природу России. Присоединись к нашей команде. Стань послом-путешественником РГО'
           }}
         </p>
-        <AppButton class="mt-10 w-full">{{ 'Голосовать' }}</AppButton>
+        <AppButton class="mt-10 w-full" :router-link="{ name: 'ambassadors' }">{{ 'Голосовать' }}</AppButton>
       </div>
     </div>
 
@@ -60,7 +60,7 @@
         </div>
       </div>
 
-      <AppButton class="mt-5 w-full" reversed>{{ 'Выбор посла' }}</AppButton>
+      <AppButton class="mt-5 w-full" reversed :router-link="{ name: 'ambassadors' }">{{ 'Выбор посла' }}</AppButton>
     </div>
 
     <div class="mt-5 grid grid-cols-1 gap-3 text-primary sm:grid-cols-2">
@@ -96,7 +96,7 @@
       <p class="mt-3 w-full sm:w-2/3">
         {{ 'Будь в курсе последних новостей, узнавай об увлекательных приключениях! Подпишись сейчас!' }}
       </p>
-      <AppButton class="mt-14 w-full" reversed>{{ 'Голосовать' }}</AppButton>
+      <AppButton class="mt-14 w-full" reversed :router-link="{ name: 'ambassadors' }">{{ 'Голосовать' }}</AppButton>
     </div>
   </div>
 </template>

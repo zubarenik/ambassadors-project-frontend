@@ -2,7 +2,7 @@
   <div class="header text-primary">
     <AppIcon name="geo" class="text-7xl" />
 
-    <div class="flex w-fit items-center justify-between gap-10">
+    <div class="flex w-fit items-center justify-between gap-10 font-medium">
       <RouterLink v-for="link in links" :key="link.name" :to="link.path" class="text-xl">{{ link.name }}</RouterLink>
     </div>
   </div>
@@ -16,7 +16,7 @@ const links = [
   },
   {
     name: 'Голосование',
-    path: { name: 'welcome-page' },
+    path: { name: 'ambassadors' },
   },
   {
     name: 'Результаты',
