@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">404</div>
+  <div class="text-center text-9xl text-primary">404</div>
 </template>
 
 <script lang="ts">

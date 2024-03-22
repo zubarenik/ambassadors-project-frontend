@@ -43,7 +43,9 @@
         </div>
 
         <div class="flex flex-grow items-end">
-          <AppButton class="w-full" :router-link="{ name: 'ambassadors' }">{{ 'Голосовать' }}</AppButton>
+          <AppButton class="w-full" :router-link="{ name: 'ambassador-detail', params: { id: item.id } }">
+            {{ 'Голосовать' }}
+          </AppButton>
         </div>
       </div>
     </div>
@@ -70,7 +72,7 @@ const filters = ref<IAmbassadorFilters>({} as IAmbassadorFilters);
 let apiParamsPrevState: IAmbassadorFiltersApi;
 
 const handleCategory = (category: IAmbassadorCategory) => {
-  filters.value.category = category;
+  filters.value.category = filters.value.category?.id === category.id ? null : category;
 };
 
 watch(

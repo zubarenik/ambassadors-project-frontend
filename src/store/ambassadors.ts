@@ -2,7 +2,6 @@ import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
 import Api, { ApiError } from '@/core/services/Api';
 import { IData, IDataSelect, UNKNOWN_ERROR, ErrorBase } from '@/core/types/base';
-import { ambassadorsExample } from './examples';
 
 const URL_CRUD = '/ambassadors';
 
@@ -61,6 +60,7 @@ export interface IAmbassadorFilters {
 
 export interface IAmbassadorFiltersApi {
   category?: number;
+  page: number;
 }
 
 export default defineStore('ambassadors', () => {
@@ -75,6 +75,7 @@ export default defineStore('ambassadors', () => {
   function getNormalizedFilters(filters: IAmbassadorFilters): IAmbassadorFiltersApi {
     return {
       ...filters,
+      page: 0,
       category: filters.category?.value,
     };
   }
@@ -105,8 +106,7 @@ export default defineStore('ambassadors', () => {
   // Actions
   async function fetchAmbassadors(params: IAmbassadorFiltersApi) {
     try {
-      // const result = await Api.getInstance.get<IAmbassadorApi[]>(URL_CRUD, params);
-      const result = ambassadorsExample;
+      const result = await Api.getInstance.get<IAmbassadorApi[]>(URL_CRUD, params);
 
       setAmbassadorList(result.map(handleResponse));
     } catch (error) {

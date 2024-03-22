@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center text-title-xl">500</div>
+  <div class="text-center text-9xl text-primary">500</div>
 </template>
 
 <script lang="ts">

@@ -1,7 +1,11 @@
-const routes = {
+export const ambassadorRoutesList = {
   path: 'list',
   name: 'ambassadors',
   component: () => import('@/views/AmbassadorsPage.vue'),
 };
 
-export default routes;
+export const ambassadorRoutesDetail = {
+  path: 'detail/:id',
+  name: 'ambassador-detail',
+  component: () => import('@/views/AmbassadorDetailPage.vue'),
+};
