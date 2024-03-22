@@ -20,7 +20,7 @@
       >
         <Slide v-for="slide in 3" :key="slide">
           <div
-            class="h-[399px] w-[355px] cursor-pointer rounded-xl bg-cover bg-center md:h-[623px] md:w-[720px]"
+            class="h-[399px] w-[355px] cursor-pointer rounded-xl bg-cover bg-center md:h-[620px] md:w-[700px]"
             :style="{ 'background-image': `url(${getAmbassador.photos[slide - 1]}` }"
             @click="slideTo(slide - 1)"
           />
@@ -36,7 +36,7 @@
       >
         <Slide v-for="slide in 3" :key="slide">
           <div
-            class="h-[108px] w-[112px] cursor-pointer rounded-xl bg-cover bg-center md:h-[201px] md:w-[233px]"
+            class="h-[108px] w-[100px] cursor-pointer rounded-xl bg-cover bg-center md:h-[203px] md:w-[233px]"
             :style="{ 'background-image': `url(${getAmbassador.photos[slide - 1]}` }"
             @click="slideTo(slide - 1)"
           />
@@ -134,6 +134,10 @@ onMounted(async () => {
     gap: 5px;
   }
 
+  .carousel__viewport {
+    overflow: visible !important;
+  }
+
   @screen md {
     .carousel__track {
       display: flex;
@@ -150,6 +154,13 @@ onMounted(async () => {
   .carousel__track {
     height: 100%;
     width: 100%;
+  }
+
+  @screen md {
+    .carousel__slide {
+      display: flex;
+      justify-content: start;
+    }
   }
 }
 </style>
