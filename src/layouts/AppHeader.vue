@@ -49,7 +49,7 @@ const links = [
   },
   {
     name: 'Результаты',
-    path: { name: 'welcome-page' },
+    path: { name: 'ambassador-winners' },
   },
 ];
 

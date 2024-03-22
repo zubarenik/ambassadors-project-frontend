@@ -114,6 +114,16 @@ export default defineStore('ambassadors', () => {
     }
   }
 
+  async function fetchAmbassadorsWinners() {
+    try {
+      const result = await Api.getInstance.get<IAmbassadorApi[]>('/winners');
+
+      setAmbassadorList(result.map(handleResponse));
+    } catch (error) {
+      throw getError(error);
+    }
+  }
+
   async function fetchAmbassador(id: number) {
     try {
       const result = await Api.getInstance.getByID<IAmbassadorApi>(URL_CRUD, id);
@@ -130,5 +140,6 @@ export default defineStore('ambassadors', () => {
     getAmbassador,
     getAmbassadorList,
     getNormalizedFilters,
+    fetchAmbassadorsWinners,
   };
 });

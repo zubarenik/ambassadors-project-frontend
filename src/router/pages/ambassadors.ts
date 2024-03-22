@@ -9,3 +9,9 @@ export const ambassadorRoutesDetail = {
   name: 'ambassador-detail',
   component: () => import('@/views/AmbassadorDetailPage.vue'),
 };
+
+export const ambassadorRoutesWinners = {
+  path: 'winners',
+  name: 'ambassador-winners',
+  component: () => import('@/views/AmbassadorResultsPage.vue'),
+};
