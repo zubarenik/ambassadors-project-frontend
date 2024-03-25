@@ -108,7 +108,7 @@ export abstract class HttpClient {
     } else if (status === 401) {
       await router.push({ name: 'login' });
     } else {
-      confirmError.open({ title: data.title, subTitle: data.detail });
+      // confirmError.open({ title: data.title, subTitle: data.detail });
 
       const apiError = new ApiError(ApiErrorNames.API_RESPONSE_ERROR, status, data.detail);
       return Promise.reject(apiError);
