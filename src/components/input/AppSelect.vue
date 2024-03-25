@@ -14,8 +14,8 @@
             ref="input"
             data-test-id="app-select-ref"
             :class="[
-              'app-input flex cursor-pointer items-center !px-4 !py-0',
-              { '!border-primary': showOptions, 'hover:!border-pink-4': !showOptions },
+              'app-input flex cursor-pointer items-center !px-4 !py-0 !text-white hover:!border-white',
+              { '!border-white': showOptions, 'hover:!text-white': !showOptions },
             ]"
           >
             <template v-if="selectedOptionIds.size">
@@ -30,7 +30,7 @@
                   mode="action"
                   border="border-current"
                   ><span class="font-bold leading-3">{{ option.name }}</span>
-                  <AppIcon name="x" class="ml-0.5 cursor-pointer text-text-md" @click.stop="handleOption(option)"
+                  <AppIcon name="x" class="text-text-md ml-0.5 cursor-pointer" @click.stop="handleOption(option)"
                 /></AppChips>
               </div>
 
@@ -39,14 +39,14 @@
               <div v-else class="line-clamp-1"><slot name="show" :data="selected" /></div>
             </template>
 
-            <span v-else class="line-clamp-1 text-font-tertiary">{{ placeholder }}</span>
+            <span v-else class="line-clamp-1 text-[#C6C2EB]">{{ placeholder }}</span>
 
-            <div class="ml-auto flex flex-shrink-0 pl-2 text-title-2md text-font-black">
+            <div class="ml-auto flex flex-shrink-0 pl-2 text-2xl text-[#C6C2EB]">
               <AppLoader v-if="loading" :size="20" :width="2" rotating class="mr-2" />
               <AppIcon
                 v-else-if="selectedOptionIds.size && (multiple || clearable)"
                 name="x-circle"
-                class="mr-2 text-dark-blue-4"
+                class="text-dark-blue-4 mr-2"
                 data-test-id="app-select-clear-btn"
                 @click.stop="clean"
               />
@@ -65,10 +65,10 @@
 
     <template #content>
       <div
-        class="subheadline z-10 rounded-sm border-2 border-background-tertiary bg-white text-font-secondary"
+        class="subheadline border-background-tertiary text-font-secondary z-10 rounded-xl border-2 bg-white"
         :style="dropdownStyles"
       >
-        <div v-if="autocomplete" class="search-input border-b-2 border-b-background-tertiary">
+        <div v-if="autocomplete" class="search-input border-b-background-tertiary border-b-2">
           <AppInput
             ref="searchRef"
             v-model.trim="search"
@@ -80,7 +80,7 @@
           >
             <template #postfix>
               <AppIcon v-if="search.length" class="mr-1" name="x" @click.stop="search = ''" />
-              <AppIcon v-else name="search" class="mr-1 cursor-default text-font-tertiary" />
+              <AppIcon v-else name="search" class="text-font-tertiary mr-1 cursor-default" />
             </template>
           </AppInput>
         </div>
@@ -91,7 +91,7 @@
               key="all"
               :class="[
                 'dropdown-item flex cursor-pointer px-3 py-2.5',
-                { active: START_INDEX === activeIndex, 'selected font-bold text-font-black': isAllSelected },
+                { active: START_INDEX === activeIndex, 'selected text-font-black font-bold': isAllSelected },
               ]"
               data-test-id="app-select-all"
               @mouseenter="setActive(START_INDEX)"
@@ -105,10 +105,10 @@
               v-for="(option, index) in filteredOptions"
               :key="option.id"
               :class="[
-                'dropdown-item flex cursor-pointer px-3 py-2.5',
+                'dropdown-item flex cursor-pointer px-3 py-2.5 hover:font-bold',
                 {
                   active: index === activeIndex,
-                  'selected font-bold text-font-black': selectedOptionIds.has(option.id),
+                  'selected text-font-black font-bold': selectedOptionIds.has(option.id),
                   disabled: disabledIds.has(option.id),
                 },
               ]"
@@ -146,6 +146,7 @@ import InputWrapper from './InputWrapper.vue';
 import { useI18n } from 'vue-i18n';
 import AppPopover from '@/components/AppPopover.vue';
 import AppInput from '@/components/input/AppInput.vue';
+import AppChips from '../form/AppChips.vue';
 
 const { t } = useI18n();
 
@@ -357,7 +358,7 @@ watch(
   &:focus,
   &.active,
   &.selected {
-    background-color: #6F67CF;
+    background-color: white;
   }
 
   &.active {

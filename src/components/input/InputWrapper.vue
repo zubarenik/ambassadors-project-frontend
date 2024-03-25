@@ -1,6 +1,6 @@
 <template>
   <div :class="['relative', { 'flex items-center': $slots.labelLeft }]">
-    <div class="subheadline-bold mb-2 text-start text-font-primary empty:hidden" data-test-id="app-input-label">
+    <div class="subheadline-bold mb-2 text-start text-white empty:hidden" data-test-id="app-input-label">
       <slot name="label" />
     </div>
 
@@ -122,7 +122,6 @@ defineEmits<{
   }
 
   &--invalid :slotted(.app-input) {
-    background-color: theme('colors.pastel-alert.error');
     border-color: theme('colors.alert.alarm');
   }
 
@@ -169,7 +168,7 @@ defineEmits<{
     transform: translate(-50%, -50%);
     cursor: pointer;
     color: var(--font-primary);
-    font-size: 17px;
+    font-size: 25px;
 
     &:empty {
       display: none;

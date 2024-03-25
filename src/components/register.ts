@@ -23,6 +23,7 @@ import CheckboxField from './form/CheckboxField.vue';
 import SwitchField from './form/SwitchField.vue';
 import HugeTextField from './form/HugeTextField.vue';
 import Required from './form/AppRequired.vue';
+import ArrayField from './form/ArrayField.vue';
 
 const registerComponents = (app: RendererElement) => {
   app.component('AppButton', Button);
@@ -43,6 +44,7 @@ const registerComponents = (app: RendererElement) => {
   app.component('SkeletonPreview', SkeletonPreview);
   app.component('AppImage', AppImage);
   app.component('AppRequired', Required);
+  app.component('ArrayField', ArrayField);
 };
 
 export default registerComponents;

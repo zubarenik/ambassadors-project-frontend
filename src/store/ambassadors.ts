@@ -23,7 +23,7 @@ export const ambassadorCategories: IAmbassadorCategory[] = [
 
 export interface IQuestion {
   question: string;
-  answer?: string;
+  answer: string;
 }
 
 export interface IAmbassadorBase extends IData {
@@ -36,8 +36,8 @@ export interface IAmbassadorBase extends IData {
   social: string;
   typeTourist: string;
   category: number | IAmbassadorCategory;
-  generalQuestions: Required<IQuestion>[];
-  specialQuestions: Required<IQuestion>[];
+  generalQuestions: IQuestion[];
+  specialQuestions: IQuestion[];
   winner: boolean;
   photos: string[];
 }
@@ -61,6 +61,17 @@ export interface IAmbassadorFilters {
 export interface IAmbassadorFiltersApi {
   category?: number;
   page: number;
+}
+
+export interface IUser extends IData {
+  ambassadorId: number;
+  name: string;
+  surname: string;
+  age: number;
+  email: string;
+  question: IQuestion[];
+  checkBoxMailing: boolean;
+  checkBoxData: boolean;
 }
 
 export default defineStore('ambassadors', () => {
@@ -134,6 +145,14 @@ export default defineStore('ambassadors', () => {
     }
   }
 
+  async function saveUser(data: IUser) {
+    try {
+      await Api.getInstance.post('/users', data);
+    } catch (error) {
+      throw getError(error);
+    }
+  }
+
   return {
     fetchAmbassadors,
     fetchAmbassador,
@@ -141,5 +160,6 @@ export default defineStore('ambassadors', () => {
     getAmbassadorList,
     getNormalizedFilters,
     fetchAmbassadorsWinners,
+    saveUser,
   };
 });

@@ -187,6 +187,7 @@ const classNames = computed(() => {
   &--disabled {
     box-shadow: none;
     cursor: default;
+    color: gray !important;
   }
 
   &--reversed {

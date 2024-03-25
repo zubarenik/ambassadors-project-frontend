@@ -1,8 +1,8 @@
 <template>
-  <div :class="['app-toast subheadline-bold flex items-center px-5 py-4 text-font-primary', stylesByModes[mode].class]">
-    <AppIcon :name="stylesByModes[mode].icon" class="app-toast_icon -translate-y-px text-title-2md" />
-    <span class="mx-3 whitespace-pre-line font-bold">{{ text }}</span>
-    <AppIcon name="x" class="-translate-y-px cursor-pointer text-title-2md" @click="$emit('close-toast')" />
+  <div :class="['app-toast subheadline-bold text-font-primary flex items-center px-5 py-4', stylesByModes[mode].class]">
+    <AppIcon :name="stylesByModes[mode].icon" class="app-toast_icon text-3xl -translate-y-px" />
+    <span class="mx-3 whitespace-pre-line font-bold" :class="stylesByModes[mode].text">{{ text }}</span>
+    <AppIcon name="x" class="text-title-2md -translate-y-px cursor-pointer" @click="$emit('close-toast')" />
   </div>
 </template>
 
@@ -17,9 +17,9 @@ interface IProps {
 defineProps<IProps>();
 
 const stylesByModes = {
-  [AppToastModes.SUCCESS]: { icon: 'check-circle-filled', class: '' },
-  [AppToastModes.ERROR]: { icon: 'x', class: 'app-toast--error' },
-  [AppToastModes.WARNING]: { icon: 'alert-circle', class: 'app-toast--warning' },
+  [AppToastModes.SUCCESS]: { icon: 'check-circle-filled', class: '', text: 'text-[#48c1b5]' },
+  [AppToastModes.ERROR]: { icon: 'x', class: 'app-toast--error', text: 'text-[red]' },
+  [AppToastModes.WARNING]: { icon: 'alert-circle', class: 'app-toast--warning', text: '' },
 };
 </script>
 
@@ -32,8 +32,8 @@ $page-padding: 2.5rem;
   --main-color: #48c1b5;
   background-color: var(--bg-color);
   border: 1px solid var(--main-color);
-  border-bottom-left-radius: theme('borderRadius.sm');
-  border-bottom-right-radius: theme('borderRadius.sm');
+  border-bottom-left-radius: theme('borderRadius.xl');
+  border-bottom-right-radius: theme('borderRadius.xl');
 
   &_icon {
     color: var(--main-color);

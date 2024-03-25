@@ -8,7 +8,7 @@
       <div
         v-for="item in getAmbassadorList"
         :key="item.id"
-        class="flex h-[776px] flex-col rounded-3xl border-2 border-primary p-5 text-primary"
+        class="flex h-fit flex-col rounded-3xl border-2 border-primary p-5 text-primary"
       >
         <div
           class="relative h-[436px] w-full rounded-[10px] bg-cover bg-center bg-no-repeat"

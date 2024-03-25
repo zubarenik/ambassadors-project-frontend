@@ -8,7 +8,7 @@
       :value="$attrs.value"
       :disabled="Boolean($attrs.disabled)"
     />
-    <span class="app-checkbox_label" data-test-id="app-checkbox-slot"><slot /></span>
+    <span class="app-checkbox_label text-white" data-test-id="app-checkbox-slot"><slot /></span>
   </label>
 </template>
 
@@ -83,7 +83,7 @@ const value = computed<ModelValue>({
     }
 
     &:checked {
-      border-color: transparent;
+      border-color: white;
       background-color: var(--primary-color);
 
       &:after {
