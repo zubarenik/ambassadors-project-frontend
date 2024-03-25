@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-10 px-8 lg:space-y-48">
+  <div class="space-y-10 overflow-x-hidden px-8 lg:space-y-16">
     <div
       class="h-[600px] w-full rounded-3xl bg-cover bg-fixed bg-center bg-no-repeat"
       :style="{ 'background-image': `url(${useImage('welcome-1.jpeg')})` }"
@@ -15,7 +15,13 @@
       </div>
     </div>
 
-    <div>
+    <div class="relative">
+      <Vue3Marquee class="absolute -left-8 mb-3 !w-screen lg:mb-6" :duration="50">
+        <div class="ml-10 text-lg font-medium text-primary md:text-3xl" v-for="items in 10" :key="items">
+          {{ '© Цель конкурса' }}
+        </div>
+      </Vue3Marquee>
+
       <div class="flex flex-col items-center justify-center rounded-3xl bg-primary p-5 md:p-10 lg:p-16">
         <h1 class="whitespace-pre-line text-center text-xl font-medium uppercase md:text-4xl lg:text-6xl xl:text-7xl">
           {{ 'Откройте новые горизонты: \n Цель Конкурса послов-путешественников РГО' }}
@@ -47,7 +53,13 @@
       </div>
     </div>
 
-    <div>
+    <div class="relative">
+      <Vue3Marquee class="absolute -left-8 mb-3 !w-screen lg:mb-6" :duration="50">
+        <div class="ml-10 text-lg font-medium text-primary md:text-3xl" v-for="items in 10" :key="items">
+          {{ '© Категории участников' }}
+        </div>
+      </Vue3Marquee>
+
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <div
           v-for="(item, index) in categories"
@@ -63,20 +75,30 @@
       <AppButton class="mt-5 w-full" reversed :router-link="{ name: 'ambassadors' }">{{ 'Выбор посла' }}</AppButton>
     </div>
 
-    <div class="mt-5 grid grid-cols-1 gap-3 text-primary sm:grid-cols-2">
-      <div
-        v-for="(item, index) in steps"
-        :key="index"
-        class="relative flex flex-col justify-between rounded-3xl border-2 border-purple p-4"
-        style="height: 287px"
-      >
-        <b class="text-6xl uppercase">{{ item.name }}</b>
+    <div class="relative">
+      <Vue3Marquee class="absolute -left-8 mb-3 !w-screen lg:mb-6" :duration="50">
+        <div class="ml-10 text-lg font-medium text-primary md:text-3xl" v-for="items in 10" :key="items">
+          {{ '© Этапы голосования' }}
+        </div>
+      </Vue3Marquee>
 
-        <div class="space-y-2">
-          <b class="whitespace-pre-line text-xl">{{ item.text }}</b>
-          <p class="static right-4 top-4 w-fit rounded-full border-2 border-primary px-4 py-2 text-primary lg:absolute">
-            {{ item.date }}
-          </p>
+      <div class="mt-5 grid grid-cols-1 gap-3 text-primary sm:grid-cols-2">
+        <div
+          v-for="(item, index) in steps"
+          :key="index"
+          class="relative flex flex-col justify-between rounded-3xl border-2 border-purple p-4"
+          style="height: 287px"
+        >
+          <b class="text-6xl uppercase">{{ item.name }}</b>
+
+          <div class="space-y-2">
+            <b class="whitespace-pre-line text-xl">{{ item.text }}</b>
+            <p
+              class="static right-4 top-4 w-fit rounded-full border-2 border-primary px-4 py-2 text-primary lg:absolute"
+            >
+              {{ item.date }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -103,6 +125,7 @@
 
 <script lang="ts" setup>
 import { useImage } from '@/core/utils/image';
+import { Vue3Marquee } from 'vue3-marquee';
 
 const infoCases = [
   {
@@ -138,22 +161,22 @@ const steps = [
   {
     name: '01',
     text: 'Этап сбора \n анкет кандидатов',
-    date: 'Пройдет с 1 марта по 31 марта',
+    date: 'Пройдет с 1 апреля по 31 апреля',
   },
   {
     name: '02',
     text: 'Этап \n голосования',
-    date: 'Пройдет с 1 марта по 31 марта',
+    date: 'Пройдет с 1 мая по 31 июля',
   },
   {
     name: '03',
     text: 'Этап подведения \n итогов',
-    date: 'Пройдет с 1 марта по 31 марта',
+    date: 'Пройдет с 1 августа по 15 августа',
   },
   {
     name: '04',
     text: 'Оглашение \n результатов',
-    date: 'Пройдет с 1 марта по 31 марта',
+    date: '15 августа',
   },
 ];
 </script>

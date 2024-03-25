@@ -62,10 +62,15 @@
       </div>
     </div>
 
-    <div class="mt-10 grid grid-cols-1 gap-8 rounded-3xl bg-primary p-5 md:grid-cols-2">
-      <p class="whitespace-pre-line text-center text-2xl font-medium text-white sm:text-left md:text-2xl">
+    <div class="relative mt-10 grid grid-cols-1 gap-8 rounded-3xl bg-primary p-5 md:grid-cols-2">
+      <p class="whitespace-pre-line text-center text-2xl font-medium text-white sm:text-left md:text-3xl lg:text-5xl">
         {{ 'Проголосовать \n за кандидата' }}
       </p>
+
+      <AppIcon
+        name="geo-2"
+        class="absolute bottom-8 left-8 hidden text-[#7D68E4] md:block md:text-[200px] lg:text-[400px]"
+      />
 
       <AppForm class="space-y-6" v-model="user" v-slot="{ valid }" :schema="schema">
         <TextField name="name" placeholder="Ваше имя">
